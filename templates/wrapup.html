@@ -1,0 +1,21 @@
+{% extends '_blank.html' %}
+
+{% block rawcontent %}
+<div class="container"><div class="my-4">
+  <p class="lead font-weight-bold my-4 px-2">
+    <span>OnWrapup</span>
+    <span class="float-right">Payload</span>
+  </p>
+
+  <table class="table table-striped table-borderless my-4">
+    <tbody>
+    {% for k, v in data.payload.items() %}
+    <tr>
+    <td>{{ k }}</td>
+    <td>{{ v }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div></div>
+{% endblock %}
