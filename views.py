@@ -1,9 +1,13 @@
+import os
 import json
 
 from flask import render_template
 
 def get_wrapup(request):
-    return "<secret>"
+    if request.remote_addr == '128.199.71.30':
+        return "<secret>"
+    else:
+        return "UNAUTHORIZED REQUEST"
 
 
 def post_wrapup(request):
